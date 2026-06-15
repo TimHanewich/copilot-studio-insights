@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   padding: var(--space-large) var(--space-medium);
-  border-right: var(--border-width) solid var(--color-separator);
+  border-right: var(--border-width) solid var(--color-dark);
   background: var(--color-light);
   color: var(--color-dark);
 }
@@ -64,28 +64,27 @@
 .app-nav button {
   width: 100%;
   border: 0;
-  border-radius: var(--radius);
-  padding: var(--space-small) var(--space-medium);
-  color: var(--color-muted);
+  border-radius: 0;
+  padding: var(--space-small) 0;
+  color: var(--color-dark);
   background: transparent;
   font: inherit;
-  font-weight: 700;
   text-align: left;
   cursor: pointer;
-  transition: color var(--transition-standard),
-    background-color var(--transition-standard);
+  transition: padding-left var(--transition-standard),
+    color var(--transition-standard);
 }
 
 .app-nav button:hover,
 .app-nav button:focus-visible,
 .app-nav button.is-active {
-  color: var(--color-dark);
-  background: var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+  padding-left: var(--space-small);
 }
 
 .app-nav button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: none;
 }
 
 .app-sidebar-credit {
